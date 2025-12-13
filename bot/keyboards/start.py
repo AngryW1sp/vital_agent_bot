@@ -1,8 +1,8 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 
 def get_start_menu():
-    kb = ReplyKeyboardMarkup(keyboard=[
-        [KeyboardButton(text='Список привычек')]
-    ], resize_keyboard=True)
-    return kb
+    kb = ReplyKeyboardBuilder()
+    kb.button(text="📈 Трекер привычек")
+    kb.adjust(1)
+    return kb.as_markup(resize_keyboard=True)
