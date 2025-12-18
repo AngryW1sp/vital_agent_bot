@@ -8,6 +8,8 @@ class Settings(BaseSettings):
         env_file='.env',
         extra='ignore'
     )
+    database_url: str = 'sqlite+aiosqlite:///./bot.db'
+    
 
 
 settings = Settings()
