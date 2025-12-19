@@ -1,4 +1,8 @@
 from pydantic_settings import SettingsConfigDict, BaseSettings
+import logging
+
+logger = logging.getLogger("my_logger")
+logger.setLevel(logging.DEBUG)
 
 
 class Settings(BaseSettings):
